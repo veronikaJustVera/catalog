@@ -47,18 +47,5 @@ class SiteController
        require_once(ROOT . '/views/site/indexsort.php');
        return true;
    }
-/*
-    -------------------------------------------------------------------------------------
-    ----------------------------------------------Search---------------------------------
-    -------------------------------------------------------------------------------------
-*/
-   public function actionSearch($request)
-    {
-        $genres = Genre::getList();
-        $searchBooks = Book::search($request);
-        require_once(ROOT . '/views/site/search.php');
-        return true;
-    }
-
-    
+  
 }
